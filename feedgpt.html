@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Feed</title>
+    <link rel="icon" type="image/x-icon" href="/media/logo.jpg">
+    <link rel="stylesheet" href="feedgpt.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="/media/logo.jpg" alt="Website Logo" class="logo">
+            <h1>time4impact</h1>
+        </div>
+        <div>
+            <button class="create-post-btn" onclick="window.location.href='createpost.html'">Create New Task</button>
+            <a href="profile.html">
+                <img src="/media/profileBtn.jpg" alt="Profile" class="profile-icon">
+            </a>
+        </div>
+    </header>
+
+    <section class="filter-container">
+        <h2>Filter Tasks</h2>
+        <div class="filter-group">
+            <label for="location-filter">Location:</label>
+            <input type="text" id="location-filter" class="filter" placeholder="Enter location">
+        </div>
+        <div class="filter-group">
+            <label for="date-filter">Date:</label>
+            <input type="text" id="date-filter" class="filter">
+        </div>
+        <!-- <div class="filter-group" id="select">
+            <label for="skill-filter">Skill:</label>
+            <select id="skill-filter">
+                <option value="">Any Skill</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="planting">Planting</option>
+                <option value="organizing">Organizing</option>
+            </select>
+        </div> -->
+        <button id="apply-filters">Apply Filters</button>
+    </section>
+
+    <main class="feed-container" id="feed-container">
+        <!-- Feed will be populated dynamically using JavaScript -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="feedgpt.js"></script>
+</body>
+</html>

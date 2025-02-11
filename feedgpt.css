@@ -1,0 +1,345 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-image:url(/media/blue.jpg);
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header */
+.main-header {
+    background: #9b9b9b00;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 30%;
+    left: 96%;
+}
+    
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.create-post-btn {
+    padding: 12px 24px;
+    background: #2ad3359d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 55px;
+}
+
+.create-post-btn:hover {
+    background: #34a853;
+    transform: translateY(-2px);
+}
+
+/* Filter Section */
+.filter-container {
+    background: #ffffff;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.filter-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #005f73;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    max-width: 97%;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    max-width: 80%;
+}
+
+.filter-group input, .filter-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-group input:focus, .filter-group select:focus {
+    border-color: #005f73;
+    box-shadow: 0 0 5px rgba(0, 95, 115, 0.5);
+}
+
+.filter-container button {
+    padding: 12px 30px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
+    display: block;
+    margin: 20px auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container button:hover {
+    background: #005f73;
+    transform: translateY(-2px);
+}
+
+/* Feed Section */
+.feed-container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#select{
+    max-width: 100%
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #005f73;
+    margin-bottom: 15px;
+}
+
+.post-card p {
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+/* Style for multi-date picker */
+.multi-date-picker {
+    max-width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.multi-date-picker:focus {
+    border-color: #005f73;
+    box-shadow: 0 0 5px rgba(0, 95, 115, 0.5);
+}
+
+/* Style for time picker */
+.time-picker {
+    width: calc(50% - 10px);
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.time-picker:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+/* Time picker container layout */
+.time-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Volunteer button */
+.volunteer-btn {
+    padding: 10px 20px;
+    background-color: #ffb703;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    margin-top: 10px;
+}
+
+.volunteer-btn:hover {
+    background-color: #fb8500;
+    transform: translateY(-2px);
+}
+
+
+
+/* Additional Styles for Time Selection */
+.time-picker-container {
+    margin-top: 10px;
+}
+
+.add-time-btn {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-time-btn:hover {
+    background-color: #005f73;
+}
+
+
+.time-selection-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-picker {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.volunteer-btn {
+    padding: 12px;
+    background: #ffb703;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.volunteer-btn:hover {
+    background: #fb8500;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    .create-post-btn {
+        margin-top: 10px;
+    }
+
+    .filter-container {
+        padding: 20px;
+    }
+
+    .feed-container {
+        grid-template-columns: 1fr;
+    }
+    .time-picker {
+        width: 100%;
+    }
+}

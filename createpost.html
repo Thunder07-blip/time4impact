@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Volunteer Task</title>
+    <link rel="icon" type="image/x-icon" href="/media/logo.jpg">
+    <link rel="stylesheet" href="createpost.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="/media/Volunteers _ Copyright Free Video Footage.mp4" type="video/mp4">
+    </video>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="/media/logo.jpg" alt="Website Logo" class="logo">
+            <h1>time4impact</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Create a Volunteer Task</h1>
+        <form id="create-post-form">
+            <!-- Task Title -->
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter task title" required>
+
+            <!-- Task Description -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter task description" required></textarea>
+
+            <!-- Location Picker -->
+            <label for="location">Task Location:</label>
+            <input type="text" id="location-input" placeholder="Enter location or drop a pin on the map" required>
+            <div id="map"></div>
+
+            <!-- Date Range -->
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+            
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <!-- Time Range -->
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" name="start-time" required>
+            
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time" name="end-time" required>
+
+            <!-- Skill Selection -->
+            <!-- <label for="skill">Skill:</label> -->
+            <!-- <select id="skill" name="skill">
+                <option value="cleaning">Cleaning</option>
+                <option value="planting">Planting</option>
+                <option value="organizing">Organizing</option>
+            </select> -->
+
+            <!-- Submit Button -->
+            <button type="submit">Create Task</button>
+        </form>
+    </div>
+
+    <script src="createpost.js"></script>
+</body>
+</html>

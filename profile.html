@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/media/logo.jpg">
+    <title>Profile - Time4Impact</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Header Section -->
+        <header class="profile-header">
+            <div class="logo-container">
+                <img src="/media/logo.jpg" alt="Time4Impact Logo" class="logo">
+                <h1>Time4Impact</h1>
+            </div>
+            <button onclick="window.location.href='login.html'" class="logout-btn">LOG OUT</button>
+        </header>
+
+        <!-- Main Profile Section -->
+        <div class="profile-content">
+            <!-- Profile Picture and Name -->
+            <div class="profile-header-content">
+                <img id="profile-pic" alt="Profile Picture" class="profile-pic" src="/media/profilePic.png">
+                <h2>Welcome, <span id="userName"> </span></h2>
+                <p>Email: <span id="userEmail"></span></p>
+            </div>
+
+            <!-- Volunteering Activities Section -->
+            <div class="activities-section">
+                <h3>Tasks You Created</h3>
+                <div id="createdTasks"></div>
+
+                <h3>Tasks You Volunteered For</h3>
+                <div id="volunteeredTasks"></div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

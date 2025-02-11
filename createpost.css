@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6dc6f2, #1e4572);
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    z-index: -1;
+}
+.main-header {
+    /* background: linear-gradient(90deg, #0077b6, #0096c7); */
+    background: rgba(0, 0, 0, 0.0);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* position:sticky;
+    top: 0; */
+    align-items: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white    ;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.9);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Header */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Inputs, Textareas */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #dcdde1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Map Styles */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    padding: 5px;
+}
